@@ -7,6 +7,7 @@
 <title>Olá como vai</title>
 </head>
 <body>
-<p><h3>Ohayo Sekai Good Morning World!</h3></p>
+<p><h3>Ohayo Sekai Good Morning World!</h3>
+<a href = "http://localhost:8081/aula/ServletMeuNome">Descubra meu nome</a></p>
 </body>
 </html>
