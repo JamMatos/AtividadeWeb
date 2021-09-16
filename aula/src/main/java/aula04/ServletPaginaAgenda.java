@@ -1,4 +1,4 @@
-package aula4;
+package aula04;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Atividade01
+ * Servlet implementation class ServletPaginaAgenda
  */
-@WebServlet("/Atividade01")
-public class Atividade01 extends HttpServlet {
+@WebServlet("/ServletPaginaAgenda")
+public class ServletPaginaAgenda extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Atividade01() {
+    public ServletPaginaAgenda() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +32,7 @@ public class Atividade01 extends HttpServlet {
 		
 		PrintWriter saida = response.getWriter();
 		saida.write("<HTML><Body>");
-		saida.write("Olá! " + request.getParameter("primeiroNome") + " " + request.getParameter("ultimoNome")+ "!");
+		saida.write("Olá! " + request.getParameter("nome") + ", número de telefone " + request.getParameter("telefone")+ " e nascido em " + request.getParameter("data")+" seja bem vindo (a)");
 		saida.write("</HTML></Body>");
 		
 		saida.close();

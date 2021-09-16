@@ -1,4 +1,4 @@
-package aula4;
+package aula6;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ServletPaginaAgenda
+ * Servlet implementation class ServletMostraIp
  */
-@WebServlet("/ServletPaginaAgenda")
-public class ServletPaginaAgenda extends HttpServlet {
+@WebServlet("/ServletMostraIp")
+public class ServletMostraIP extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletPaginaAgenda() {
+    public ServletMostraIP() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +28,19 @@ public class ServletPaginaAgenda extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		doPost(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter resposta = response.getWriter();
 		
-		PrintWriter saida = response.getWriter();
-		saida.write("<HTML><Body>");
-		saida.write("Olá! " + request.getParameter("nome") + ", número de telefone " + request.getParameter("telefone")+ " e nascido em " + request.getParameter("data")+" seja bem vindo (a)");
-		saida.write("</HTML></Body>");
-		
-		saida.close();
+		resposta.write("IP do cliente: ");
+		resposta.write(request.getRemoteAddr());
+		resposta.write("Host do cliente: ");
+		resposta.write(request.getRemoteHost());
 	}
 
 }
