@@ -11,7 +11,7 @@
 	<form action = "TrabalhandoComSessoes" method = "post">
 		Nome: <input type = "text" name = "nome">
 		Sobrenome: <input type="text" name="sobrenome"><br>
-		Endereço residencial: <input type="text" name="endereço residencial">
+		Endereço residencial: <input type="text" name="endereco residencial">
 		Rua: <input type="text" name="rua"><br>
 		Complemento: <input type="text" name="complemento"><br>
 		Cidade: <input type ="text" name="cidade"><br>

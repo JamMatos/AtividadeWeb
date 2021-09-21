@@ -1,4 +1,4 @@
-package aula6;
+package aula06;
 
 import java.io.IOException;
 import java.io.PrintWriter;
