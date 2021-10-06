@@ -40,6 +40,7 @@ public class ServletTela1Cadastro extends HttpServlet {
         resposta.write("<body>");
         resposta.write("Preencha seus dados profissionais:");
         resposta.write("<form action=\"ServletTela2Cadastro\">");
+        // HttpSession sessao = request.getSession(false);
         
         resposta.write("<input type=\"hidden\" name=\"nome\" value=\"");
         resposta.write(request.getParameter("nome") + "\">");
