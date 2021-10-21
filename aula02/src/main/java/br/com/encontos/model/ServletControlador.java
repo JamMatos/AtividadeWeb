@@ -52,7 +52,7 @@ public class ServletControlador extends HttpServlet {
 			
 			request.setAttribute("lista", sistema.listarEncontros());
 			resposta = "listrar.jsp";
-		}
+		} 
 		request.getRequestDispatcher(resposta).forward(request, response);
 	}
 
